@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giampaoli: business & law.</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- En tu archivo HTML -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+  <img src="./assets/NavBar logo Giampaoli Business Law.jpg" alt="Logo Giampaoli Business & Law" class="navbar-logo" />
+</div>
+
+<button class="menu-toggle" aria-label="Abrir menú">
+  <i class="fas fa-bars"></i>
+</button>
+
+    <div class="navbar-menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#conocénos">Conocénos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="inicio" class="section hero">
+      <div class="container">
+        <h1>Giampaoli: business & law.</h1>
+        <p class="subtitle">Experiencia que impulsa resultados.</p>
+        <a href="#contacto" class="button">Contactar ahora</a>
+      </div>
+
+      <!-- Botones flotantes -->
+      <div class="floating-info">
+        <div class="info-item">
+          <button class="toggle-btn" onclick="toggleInfo(this, 'identidad')">+</button>
+          <span class="info-title">IDENTIDAD</span>
+          <div class="info-content hidden" id="identidad">
+            <p>Somos una firma legal comprometida con la ética, la transparencia y la excelencia profesional...</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <button class="toggle-btn" onclick="toggleInfo(this, 'como-surge')">+</button>
+          <span class="info-title">CÓMO SURGE</span>
+          <div class="info-content hidden" id="como-surge">
+            <p>Nacimos de la necesidad de ofrecer asesoramiento legal accesible, moderno y eficaz...</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <button class="toggle-btn" onclick="toggleInfo(this, 'valores')">+</button>
+          <span class="info-title">VALORES</span>
+          <div class="info-content hidden" id="valores">
+            <p>Actuamos con integridad, compromiso y respeto...</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <button class="toggle-btn" onclick="toggleInfo(this, 'mision')">+</button>
+          <span class="info-title">MISIÓN</span>
+          <div class="info-content hidden" id="mision">
+            <p>Brindar asesoramiento legal de calidad, enfocado en resultados concretos...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conocénos" class="section">
+      <div class="container about-container">
+        <div class="about-text">
+          <h2>Conocénos</h2>
+          <p>En Giampaoli: Business & Law, la solidez profesional no es solo una promesa, sino una práctica constante. Nuestro enfoque combina rigor técnico con visión estratégica, brindando asesoramiento jurídico de alta precisión y soluciones empresariales que generan resultados concretos. Cada consulta, cada documento, cada decisión está respaldada por un equipo que entiende el valor de la confianza y la importancia de actuar con integridad.</p>
+          <p>Nos especializamos en acompañar a empresas que buscan crecer con seguridad, anticipando riesgos y fortaleciendo sus estructuras legales. La experiencia acumulada y el trato personalizado nos permiten ofrecer respuestas claras, eficientes y alineadas con los objetivos de cada cliente. Porque en Giampaoli, el éxito no se improvisa: se construye con conocimiento, compromiso y resultados que hablan por sí solos.</p>
+        </div>
+        <div class="about-image">
+          <img src="./assets/main_background.webp" alt="Miguel Angel Giampaoli - Abogado" />
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="services-grid">
+          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
+  <h3>Jurídicos</h3>
+  <p>Asesoramiento jurídico integral para empresas, enfocado en prevenir riesgos y garantizar decisiones seguras.</p>
+</a>
+          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
+  <h3>Contables</h3>
+  <p>Gestión contable precisa y estratégica para optimizar recursos y asegurar cumplimiento fiscal.</p>
+</a>
+          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
+  <h3>Notariales</h3>
+  <p>Servicios notariales confiables y ágiles, con respaldo legal para documentos y certificaciones clave.</p>
+</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>¡Contactanos a través de los siguientes medios!</p>
+        <div class="social-links">
+          <a href="mailto:contacto@giampaoli.ar" class="button">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://wa.me/5493416920444" target="_blank" class="button">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/company/giampaoli-business-law/" target="_blank" class="button">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Nuestras Redes</h2>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/17aCLxjaDA/" class="button" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/giampaolibusiness?igsh=NmF1bmZzMWhzdGNs" target="_blank" class="button">
+            <i class="fab fa-instagram"></i>Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleInfo(button, id) {
+      const content = document.getElementById(id);
+      const allContents = document.querySelectorAll('.info-content');
+      const allButtons = document.querySelectorAll('.toggle-btn');
+
+      allContents.forEach(section => {
+        if (section.id !== id) {
+          section.classList.remove('visible');
+          section.classList.add('hidden');
+        }
+      });
+
+      allButtons.forEach(btn => {
+        if (btn !== button) {
+          btn.textContent = '+';
+        }
+      });
+
+      const isVisible = content.classList.contains('visible');
+
+      if (isVisible) {
+        content.classList.remove('visible');
+        content.classList.add('hidden');
+        button.textContent = '+';
+      } else {
+        content.classList.remove('hidden');
+        content.classList.add('visible');
+        button.textContent = '–';
+      }
+    }
+  </script>
+</body>
+</html>
