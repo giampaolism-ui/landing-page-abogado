@@ -106,9 +106,10 @@ body {
 }
 
 .container {
-  max-width: 1400px; /* o más si tu diseño lo permite */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  padding: 4rem 2rem;
 }
 
 /* -------------------- SERVICIOS -------------------- */
@@ -129,13 +130,7 @@ body {
   margin-bottom: 2rem; /* ↑ Espacio entre título y tarjetas */
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(280px, 1fr)); /* fuerza 4 columnas */
-  gap: 1.5rem; /* separación más breve entre tarjetas */
-  padding: 1rem 0;
-  justify-content: center;
-}
+
 
 .service-card {
   display: flex;
@@ -144,7 +139,6 @@ body {
   gap: 2rem;
   padding: 2rem;
   min-height: 180px;
-  max-width: 100%; /* asegura que ocupen todo el espacio disponible */
   background-color: rgba(120, 120, 120, 0.15); /* gris más frío y visible */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
