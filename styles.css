@@ -144,6 +144,14 @@ body {
   text-decoration: none;
 }
 
+.services-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 .service-card:hover {
   transform: translateY(-5px);
   background-color: rgba(120, 120, 120, 0.15); /* gris frío translúcido */
@@ -172,14 +180,6 @@ body {
   gap: 2rem; /* Espacio entre tarjetas */
   flex-wrap: wrap; /* Opcional: permite que se acomoden si no hay suficiente espacio */
 }
-.services-grid {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* permite que se acomoden si el ancho es insuficiente */
-}
-
 /* -------------------- CONTACTO -------------------- */
 #contacto {
   background-image: url('./assets/fondo-contacto.png');
