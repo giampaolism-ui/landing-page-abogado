@@ -132,7 +132,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 1rem 0; /* ↓ Menos espacio abajo para subir visualmente */
   justify-content: center; /* Centra horizontalmente las tarjetas */
@@ -144,6 +144,8 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+ max-width: 600px; /* nuevo */
+  margin: 0 auto;   /* centra cada tarjeta si hay espacio */
   min-height: 180px;
   background-color: rgba(120, 120, 120, 0.15); /* gris más frío y visible */
   border-radius: 10px;
