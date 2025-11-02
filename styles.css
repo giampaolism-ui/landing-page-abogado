@@ -152,7 +152,6 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: nowrap; /* ← evita que se bajen de línea */
-  overflow-x: auto;
 }
 
 .service-card:hover {
