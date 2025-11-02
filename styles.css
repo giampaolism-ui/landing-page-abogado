@@ -169,6 +169,14 @@ body {
   line-height: 1.6;
   pointer-events: none;
 }
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem; /* Espacio entre tarjetas */
+  flex-wrap: wrap; /* Opcional: permite que se acomoden si no hay suficiente espacio */
+}
 /* -------------------- CONTACTO -------------------- */
 #contacto {
   background-image: url('./assets/fondo-contacto.png');
