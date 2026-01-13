@@ -237,7 +237,7 @@ body {
 .button {
   background-color: #fdf6e3;
   color: #001f3f;
-  padding: 0.5rem 0.5rem;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -696,7 +696,7 @@ p,
   width: 48px;
   height: 48px;
   padding: 0;
-  border-radius: 12px; /* cuadrado de puntas redondeadas */
+  border-radius: 50%;
   justify-content: center;
 }
 

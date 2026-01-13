@@ -1,0 +1,1215 @@
+@media (min-width: 769px) {
+  body {
+    font-family: Arial, sans-serif;
+  }
+}
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+
+/* Forzar los spans del título hero a ser inline */
+.hero h1 span {
+  display: inline;
+}
+@keyframes heartbeat-black {
+  0%   { transform: scale(1); background: #767474; color: #fff; }
+  20%  { transform: scale(1.12); background: #000; color: #fff; }
+  40%  { transform: scale(1); background: #fff; color: #000; }
+  60%  { transform: scale(1.12); background: #000; color: #fff; }
+  100% { transform: scale(1); background: #767474; color: #fff; }
+}
+
+#contacto .contacto-right .icon-link.heartbeat-black {
+  animation: heartbeat-black 1.5s ease-in-out;
+  will-change: transform, background, color;
+}
+/* HERO SECTION */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 769px) {
+  .hero-content {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .hero-title {
+    text-align: left;
+    margin-bottom: 2.5rem;
+    padding-top: 12vh;
+  }
+  .hero-content .button {
+    display: block;
+    margin: 0 0 0 0;
+    align-self: flex-start;
+    animation: heartbeat 1.5s ease-in-out;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero {
+    background: linear-gradient(rgba(180,0,0,0.35), rgba(180,0,0,0.35)), url('./assets/main_background.png') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+}
+
+.hero-title {
+  color: #fff;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño fluido */
+  font-family: 'Garet', 'Share Tech', Arial, sans-serif;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  text-align: left;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    #servicios {
+      padding-bottom: 5rem !important;
+    }
+  .section,
+  #servicios,
+  #contacto {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+ 
+ .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5.5rem; /* evita navbar */
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .hero-title {
+     font-size: 0.77rem;
+     display: block;
+     margin: 0 auto 6vh auto;
+     z-index: 2;
+     line-height: 1.15;
+     /* Sin animación */
+  }
+
+  .hero-content .button {
+    display: block;
+    margin: 0 auto 15vh auto; /* separación del 15% */
+    z-index: 2;
+    animation: heartbeat 1.5s ease-in-out; /* latido una vez */
+  }
+
+  .floating-info {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 1.5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+  }
+
+  .floating-info .button {
+     width: 42%;
+     max-width: 100px;
+     height: 40%;
+     margin: 0 auto;
+     text-align: center;S
+  }
+
+  /* Modal en móvil (efecto lupa flotantes) */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: zoomIn 0.4s ease forwards;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+}
+
+/* Animación de latido */
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.08); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Animación efecto lupa */
+@keyframes zoomIn {
+  0%   { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Variables globales */
+@font-face {
+  font-family: 'Garet';
+  src: url('fonts/Garet-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('fonts/Garet-Heavy.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Fuente por defecto en toda la página */
+body {
+  font-family: 
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --light-color: #ecf0f1;
+}
+
+/* Reset y base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* -------------------- NAVBAR -------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 2,7rem;
+  background: #fff;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  margin: 0;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-menu a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 1,2rem;
+  transition: color 0.3s;
+  text-transform: uppercase; /* ← Esto sí funciona */
+}
+
+.navbar-menu a:hover {
+  color: #fff;
+}
+
+
+/* -------------------- HERO -------------------- */
+.hero {
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+  }
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  text-transform: uppercase;
+  z-index: 2; /* se asegura que quede encima de la imagen */
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  max-width: 500px;
+  text-transform: none;
+  z-index: 2;
+}
+
+/* -------------------- SECCIONES -------------------- */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  scroll-margin-top: 4rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+/* -------------------- SERVICIOS -------------------- */
+/* Sección principal */
+#servicios {
+  background-color: #616060;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+#servicios h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 0.rem;   /* aún menos espacio arriba */
+  margin-bottom: 5rem;  /* más separación con las tarjetas */
+}
+
+/* Contenedor de tarjetas en una sola fila */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15); /* fondo traslúcido */
+  backdrop-filter: blur(10px); /* efecto glass */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* borde suave */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra elegante */
+  text-decoration: none;
+  color: #fff; /* texto blanco para contraste */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Evita scroll horizontal */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+/* -------------------- CONTACTO -------------------- */
+#contacto {
+  background-color: #fff;
+  background-image: url('./assets/fondoContacto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0.5rem 2rem; /* padding mínimo */
+  color: #000;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjeta de contacto: estilo inspirado en .service-card, pero más compacta y delicada */
+#contacto .contacto-left {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem; /* aún más compacto */
+  padding: 0.45rem; /* padding reducido para tarjeta compacta */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94); /* translúcido muy claro */
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+#contacto .contacto-left h2 {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#contacto .contacto-left p {
+  font-size: 0.85rem;
+  margin: 0 auto;
+  color: #000;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#contacto .contacto-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.06rem; /* gap muy pequeño entre botones */
+  margin-top: 0.02rem; /* espacio mínimo entre título y botones */
+}
+
+#contacto .contacto-button {
+  background: rgba(213, 212, 212, 0.92); /* translúcido */
+  color: #000;
+  /* aumentar la altura ~20% (vertical padding 0.32 -> 0.38) */
+  padding: 0,5rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: left;
+  transition: all 0.14s ease;
+  /* reducir el ancho en 20% respecto al 100% anterior */
+  width: 60%;
+  display: block;
+  margin: left 10px;
+  margin-top: 10px; /* centrar la caja de botón dentro de la tarjeta */
+}
+
+#contacto .contacto-button:hover {
+  background: rgba(239,239,239,0.95);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+#contacto .contacto-button i {
+  margin-right: 0.4rem;
+}
+
+/* Tarjeta de contacto derecha: estilo glass para iconos sociales */
+#contacto .contacto-right {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+#contacto .contacto-right h2 {
+  font-size: 1,5rem;
+  margin: 0 0 0.2rem 0;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Contenedor de iconos en fila horizontal */
+.social-icons,
+#contacto .redes-iconos {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botones de iconos sociales: cuadrados oscuros */
+#contacto .icon-link {
+  background: rgba(213, 212, 212, 0.92); /* gris oscuro/charcoal */
+  color: #fff;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  transition: all 0.2s ease;
+}
+
+#contacto .icon-link:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contacto .icon-link i {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+#contacto .container {
+  width: 100%;
+  max-width: 400px;
+  margin-left: 5vw;
+  margin-right: auto;
+  /* acercar el contenedor al margen superior de la sección */
+  align-self: flex-start;
+  margin-top: 7rem !important;
+  background-color: transparent; /* quitar fondo negro */
+  padding: 0.6rem 0.4rem; /* padding lateral reducido */
+  border-radius: 8px;
+  color: #000;
+}
+
+
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: #fdf6e3;
+  color: #001f3f;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e8e2d6;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+/* -------------------- CONOCÉNOS -------------------- */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .about-text h2,
+  #servicios h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .service-card h3 {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+}
+
+/* CUADRANTE IZQUIERDO CENTRADO */
+.about-text {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  text-align: center;
+}
+
+/* TITULO CONOCENOS */
+.about-text h2 {
+  font-size: 2.52rem; /* 10% más pequeño que 2.8rem */
+  margin-bottom: 1.5rem;
+  margin-top: 1%;
+  color:#000
+}
+
+/* TEXTO */
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 500px; /* evita líneas demasiado largas */
+}
+
+
+.about-image {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* -------------------- BOTONES FLOTANTES -------------------- */
+/* BOTONES FLOTANTES */
+.floating-info {
+  position: absolute;
+  top: 50%;
+  right: 7vw;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10;
+  width: 240px;
+}
+
+.info-item {
+  background-color: #ffffff; /* ← Fondo blanco */
+  color: #000; /* Texto oscuro para contraste */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.toggle-btn {
+  background-color: #ffffff; /* ← Fondo blanco */
+  color: #000; /* Ícono oscuro */
+  border: none;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  font-weight: bold;
+}
+
+.toggle-btn:hover {
+  background-color: #f0f0f0; /* Ligero sombreado al pasar el mouse */
+}
+
+/* BOTÓN “CONTACTAR AHORA” */
+.button {
+  background-color: #ffffff;
+  color: #000;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15); /* Borde ghost, igual a service card */
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  
+  align-items: center;
+  margin: 1.2rem auto 0 auto;
+  display: block;
+
+  /* SOMBRA TIPO SERVICE CARD */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fafafa;
+  border-color: rgba(0, 0, 0, 0.25);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
+
+  transform: translateY(1px);
+}
+
+/* -------------------- CONTENIDO DESPLEGABLE -------------------- */
+.info-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0.5rem;
+  color: #001f3f;
+  font-size: 0.9rem;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.info-content.visible {
+  max-height: 300px;
+  opacity: 1;
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+.info-content.hidden {
+  max-height: 0;
+  opacity: 0;
+}
+
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 1024px) {
+  .hero h1 {
+  font-size: 2rem;
+  margin: 8vh 0 6vh 0;
+  padding-top: 0;
+  max-width: 90vw;
+  text-align: center;
+  z-index: 2;
+  line-height: 1.15;
+
+  .floating-info {
+    right: 5vw;
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #contacto .contacto-right {
+    max-width: 95vw;
+    padding: 0.7rem 0.3rem;
+    border-radius: 12px;
+  }
+
+  #contacto .social-icons,
+  #contacto .redes-iconos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+  }
+
+  #contacto .contacto-right .icon-link {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
+    border-radius: 6px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  #contacto .icon-link i {
+    font-size: 0.8rem;
+  }
+  /* NAVBAR */
+
+  .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+ .navbar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 0; /* se elimina para que arranque desde arriba */
+  padding: 2rem;
+
+  background-color: rgba(30, 30, 30, 0.6); /* gris oscuro translúcido */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+  .navbar-menu a {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #f2f2f2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-menu a:hover {
+  color: #ffffff;
+}
+
+  /* HERO */
+  .hero {
+    width: 100vw;
+    min-height: 100vh;
+    background: url('./assets/main_background.png') center center no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+
+  .hero h1,
+  .hero .subtitle {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  /* CONOCÉNOS */
+  .about-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .about-image {
+    margin-top: 1rem;
+  }
+
+/* BOTONES FLOTANTES */
+.floating-info {
+  position: static;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+     padding-left: 3rem;
+    padding-right: 3rem;
+padding-bottom: 3rem;
+}
+
+/* ==================== BOTONES FLOTANTES · MOBILE ==================== */
+.floating-info .button {
+  padding: 0.45rem 0.7rem;     /* más chico, similar a Contactar ahora */
+  font-size: 0.75rem;          /* baja protagonismo */
+  font-weight: 600;            /* menos pesado que bold */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  width: 100%;
+  max-width: 180px;            /* evita que se agranden */
+  margin: 0 auto;              /* centra */
+  
+  box-shadow:
+    0 1px 3px rgba(0,0,0,0.08); /* sombra MUY sutil */
+}
+.floating-info {
+  gap: 0.35rem;   /* menos aire entre botones */
+}
+
+
+/* PASO 3 – evitar que botones flotantes empujen fuera del hero */
+.floating-info .button {
+  margin-top: 0 !important;
+}
+
+
+
+  /* SERVICIOS */
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem 0.7rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+    min-height: 0;
+    max-width: 95vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+    gap: 0.4rem;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .services-grid {
+    gap: 0.7rem;
+  }
+
+  /* CONTACTO móvil: compactar para que ambas tarjetas quepan sin scroll */
+  #contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0.3rem 0.2rem;
+    gap: 0.3rem;
+    min-height: 0;
+    height: auto;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  #contacto .contacto-left,
+  #contacto .contacto-right {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  #contacto .contacto-left h2,
+  #contacto .contacto-right h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #contacto .contacto-left p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #contacto .contacto-button {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  #contacto .icon-link {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 100%;
+  }
+
+  #contacto .icon-link i {
+    font-size: 1rem;
+  }
+
+  .button {
+  font-size: 0.8rem;
+  padding: 0.54rem 0.9rem;
+  margin: 1.2rem auto 0 auto;
+  display: block;
+  width: fit-content;
+}
+
+
+  .social-links {
+    gap: 0.75rem;
+  }
+}
+
+/* -------------------- TOGGLE MENU -------------------- */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+
+  .container h1 {
+    line-height: 1.2em;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 2rem;
+    z-index: 999;
+    border-radius: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu.active {
+     display: flex;
+     background-color: rgba(30, 30, 30, 0.85); /* más opaco al estar activo */
+  }
+
+  .navbar-menu a {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .navbar-menu a:hover {
+    color: #ccc;
+  }
+
+  #contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+  .hero {
+    padding-top: 6rem;
+  }
+
+/* ==================== TIPOGRAFÍA GLOBAL UNIFICADA ==================== */
+
+/* TÍTULOS Y BOTONES */
+h1, h2, h3, h4, h5, h6,
+.button,
+.service-card h3,
+.info-title {
+  font-family: 'Share Tech', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* TEXTOS */
+p,
+.service-card p,
+.subtitle,
+.info-content {
+  font-family: 'Share Tech', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+
+.contacto-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ocupa toda la pantalla */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contacto-left,
+.contacto-right {
+  flex: 1 1 100%; /* en mobile ocupan todo el ancho */
+  max-width: 400px; /* límite para que no se desborde */
+  margin: 10px auto;
+  text-align: center;
+}
+
+.contacto-links .contacto-button {
+  display: inline-block;
+  margin: 10px;
+  width: 80%;
+  max-width: 250px;
+}
+
+.redes-iconos .icon-link {
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+/* ==================== TIPOGRAFÍA · MOBILE ==================== */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+}
+
+/* ==================== TIPOGRAFÍA · ESCRITORIO ==================== */
+@media (min-width: 769px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+}
+
+
