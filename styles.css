@@ -267,18 +267,22 @@ body {
 
 .about-text {
   padding-right: 2rem;
-  text-align: center;
+  text-align: justify;
 }
 
 .about-text h2 {
   font-size: 2.5rem;
+  text-align: center;
 }
-}
+
 
 .about-text p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   line-height: 1.8;
+   text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .about-image {
@@ -487,6 +491,10 @@ body {
   .about-text {
      padding-right: 0;
      text-align: center;
+  }
+
+  .about-text p {
+    text-align: justify;
   }
 
   .about-image {
@@ -780,4 +788,35 @@ p,
 .floating-info .button {
   animation: heartbeat 2.5s ease-in-out infinite;
   will-change: transform;
+}
+
+
+/* Servicios – desktop */
+@media (min-width: 1025px) {
+  .service-card p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .info-content {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+}
+
+/* Servicios – mobile */
+@media (max-width: 768px) {
+  .service-card p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .info-content {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
 }
