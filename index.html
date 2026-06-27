@@ -1,183 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GIAMPAOLI</title>
-  <meta name="description"
-    content="Giampaoli Business and Law ofrece soluciones corporativas integrales a empresas y particulares: estrategia, gestión y cumplimiento legal">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <!-- En tu archivo HTML -->
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="navbar-brand">
-  <img src="./assets/NavBar logo Giampaoli Business Law.jpeg" alt="Giampaoli Business & Law" class="navbar-logo" />
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Giampaoli Business and Law ofrece soluciones corporativas integrales a empresas y particulares: estrategia, gestión y cumplimiento legal"
+    />
+    <title>GIAMPAOLI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#inicio">Saltar al contenido principal</a>
 
-<button class="menu-toggle" aria-label="Abrir menú">
-  <i class="fas fa-bars"></i>
-</button>
+    <header class="header">
+      <nav class="navbar" aria-label="Navegacion principal">
+        <a class="logo" href="#inicio" aria-label="Giampaoli Business and Law, inicio">
+          <img class="logo-mark" src="img/logo-unico-navbar.jpg" alt="Giampaoli logo" />
+          <img class="logo-name" src="img/nombreEmpresa-unico-navbar.png" alt="Giampaoli Business and Law" />
+        </a>
 
-    <div class="navbar-menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#conocénos">Conocenos</a>
-      <a href="#servicios">Áreas</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
+        <ul class="menu">
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#conocenos">INSTITUCIONAL</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#areas-practica">AREAS DE PRACTICA</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="inicio" class="section hero">
-      <div class="container">
-        <h1>Expertise que impulsa resultados.</h1>
-        <a href="#contacto" class="button">Contactar ahora</a>
-      </div>
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+        <div class="hero-content">
+          <h1 id="titulo-principal">
+            Expertise<br />
+            que impulsa<br />
+            <span>resultados</span>
+          </h1>
 
-      <!-- Botones flotantes -->
-      <div class="floating-info">
-        <div class="info-item">
-          <button class="toggle-btn" onclick="toggleInfo(this, 'identidad')">+</button>
-          <span class="info-title">IDENTIDAD</span>
-          <div class="info-content hidden" id="identidad">
-            <p>Somos una firma de asesoramiento integral que combina conocimiento legal, contable y financiero para acompañar decisiones estratégicas con respaldo, claridad y visión de largo plazo.</p>
+          <a class="hero-button" href="#contacto">Contactanos</a>
+        </div>
+      </section>
+
+      <section class="info" id="conocenos" aria-labelledby="titulo-conocenos">
+        <h2 class="sr-only" id="titulo-conocenos">Conocenos</h2>
+
+        <div class="info-tabs" aria-label="Temas institucionales">
+          <a href="#identidad"><span aria-hidden="true">+</span> ENFOQUE</a>
+          <a href="#origen"><span aria-hidden="true">+</span> METODOLOGIA </a>
+          <a href="#valores"><span aria-hidden="true">+</span> PROPOSITO</a>
+        </div>
+
+        <div class="cards">
+          <article class="card" id="identidad">
+            <h3>ENFOQUE</h3>
+            <p>
+              Las decisiones relevantes suelen involucrar dimensiones jurídicas, contables, notariales y financieras de manera simultánea. Nuestro enfoque integra estas perspectivas en un único proceso de análisis para proporcionar claridad, consistencia y respaldo técnico.
+            </p>
+          </article>
+
+          <article class="card" id="origen">
+            <h3>METODOLOGIA</h3>
+            <p>
+              Cada recomendación surge de la evaluación rigurosa de riesgos, impactos y alternativas. Priorizamos el análisis profundo, la comprensión del contexto y la construcción de soluciones sostenibles por sobre respuestas estandarizadas.
+            </p>
+          </article>
+
+          <article class="card" id="valores">
+            <h3>PROPOSITO</h3>
+            <p>
+              Acompañar a personas, empresas e inversores en procesos de decisión complejos, aportando una visión integral que contribuya a proteger valor, generar oportunidades y fortalecer proyectos de largo plazo.
+            </p>
+          </article>
+
+      
+        </div>
+
+      </section>
+
+      <section class="nosotros-section" id="nosotros" aria-labelledby="titulo-nosotros">
+        <div class="nosotros-content">
+          <h2 id="titulo-nosotros">Nosotros</h2>
+          <div class="nosotros-columns">
+            <p>
+              <strong>Giampaoli: Business &amp; Law</strong> es una firma de asesoramiento integral especializada en el análisis y acompañamiento de decisiones con impacto jurídico, contable, notarial y financiero. Su modelo de trabajo se fundamenta en la integración de disciplinas que, tradicionalmente, operan de manera independiente, permitiendo abordar escenarios complejos desde una perspectiva coordinada y estratégica.
+            </p>
+            <p>
+              La firma asiste a personas, empresas e inversores en procesos que requieren evaluación rigurosa, comprensión multidimensional y visión de largo plazo. A través de un enfoque basado en criterio técnico, análisis de impacto y planificación, contribuye a la construcción de soluciones sólidas, sostenibles y alineadas con los objetivos de cada cliente.
+            </p>
           </div>
         </div>
+      </section>
 
-        <div class="info-item">
-          <button class="toggle-btn" onclick="toggleInfo(this, 'como-surge')">+</button>
-          <span class="info-title">CÓMO SURGE</span>
-          <div class="info-content hidden" id="como-surge">
-            <p>Nacemos a partir de la necesidad de ofrecer una mirada unificada, profesional y estratégica que integre distintas áreas clave en un único enfoque de acompañamiento.</p>
+      <section class="areas-section" id="areas-practica" aria-labelledby="titulo-areas">
+        <div class="areas-content">
+          <h2 id="titulo-areas">Areas de practica</h2>
+
+          <div class="areas-grid">
+            <article class="area-card">
+              <div class="area-icon">
+                <img src="img/ICONOS-06.webp" alt="" />
+                <h3>Legal</h3>
+              </div>
+              <p>
+                Asesoramiento orientado a la identificación, evaluación y gestión de riesgos jurídicos, con intervención en asuntos regulatorios, contractuales, societarios y de cumplimiento. Su objetivo es aportar seguridad, previsibilidad y respaldo técnico a decisiones con impacto legal.
+              </p>
+            </article>
+
+            <article class="area-card">
+              <div class="area-icon">
+                <img src="img/ICONOS-08.webp" alt="" />
+                <h3>Notarial</h3>
+              </div>
+              <p>
+                Intervención especializada en actos, contratos e instrumentos que requieren formalización y autenticidad, garantizando seguridad jurídica, validez documental y adecuada instrumentación de decisiones relevantes.
+              </p>
+            </article>
+
+            <article class="area-card">
+              <div class="area-icon">
+                <img src="img/ICONOS-07.webp" alt="" />
+                <h3>Contable</h3>
+              </div>
+              <p>
+                Análisis y soporte contable destinados a fortalecer la calidad de la información, la organización de procesos y la comprensión económica de cada operación. Su aporte resulta esencial para la planificación, el control y la toma de decisiones fundamentadas.
+              </p>
+            </article>
+
+            <article class="area-card">
+              <div class="area-icon">
+                <img src="img/ICONOS-09.webp" alt="" />
+                <h3>Financiera</h3>
+              </div>
+              <p>
+                Evaluación de escenarios y variables económicas orientadas a la planificación, estructuración y sostenibilidad de proyectos, inversiones y negocios. Su enfoque contribuye a comprender riesgos, oportunidades e impactos financieros de largo plazo.
+              </p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="info-item">
-          <button class="toggle-btn" onclick="toggleInfo(this, 'valores')">+</button>
-          <span class="info-title">VALORES</span>
-          <div class="info-content hidden" id="valores">
-            <p>Actuamos con integridad, rigor técnico y compromiso, priorizando la confianza, la transparencia y el análisis responsable en cada decisión.</p>
+      <section class="contact-section" id="contacto" aria-labelledby="titulo-contacto">
+        <div class="contact-main">
+          <div class="contact-copy">
+            <h2 id="titulo-contacto">CONTACTO</h2>
+            <p>
+              &iexcl;Contactanos a trav&eacute;s de los<br />
+              siguientes medios!
+            </p>
+
+            <div class="contact-actions" aria-label="Medios de contacto">
+              <a class="contact-button" href="mailto:contacto@giampaoli.ar">
+                <span class="contact-button-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M3 6.5h18v11H3z" />
+                    <path d="m4 7 8 6 8-6" />
+                  </svg>
+                </span>
+                <span>EMAIL</span>
+              </a>
+
+              <a class="contact-button" href="https://wa.me/5493416920444" target="_blank" rel="noopener">
+                <span class="contact-button-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M6.5 19.5 7.4 16A8 8 0 1 1 10.1 18z" />
+                    <path d="M9.4 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.8 2.7l.6-.5c.2-.2.5-.2.7-.1l1.5.7c.3.1.4.3.4.6v.5c0 .3-.1.5-.4.7-.5.3-1.2.5-1.8.4-3.4-.5-6.1-3.1-6.6-6.5-.1-.6.1-1.3.4-1.8z" />
+                  </svg>
+                </span>
+                <span>WHATSAPP</span>
+              </a>
+            </div>
+
+            <div class="contact-socials" aria-label="Redes sociales">
+              <a href="https://www.linkedin.com/company/giampaoli-business-law/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="img/red.in.png" alt="" />
+              </a>
+              <a href="https://www.instagram.com/giampaolibusiness?igsh=NmF1bmZzMWhzdGNs" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="img/red.ig.png" alt="" />
+              </a>
+              <a href="https://www.facebook.com/share/16tuDi56VE/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+                <img src="img/red-fb.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-image" aria-hidden="true">
+            <img src="img/contacto.webp" alt="" />
           </div>
         </div>
+      </section>
 
-        <div class="info-item">
-          <button class="toggle-btn" onclick="toggleInfo(this, 'mision')">+</button>
-          <span class="info-title">MISIÓN</span>
-          <div class="info-content hidden" id="mision">
-            <p>Acompañar a personas y empresas en decisiones estratégicas, brindando soluciones precisas y sostenibles desde una visión integral y profesional.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="conocénos" class="section">
-      <div class="container about-container">
-        <div class="about-text">
-          <h2>Conocenos</h2>
-          <p>Giampaoli: Business & Law es una firma de servicios profesionales integrales orientada a la gestión de decisiones complejas en contextos económicos y regulatorios exigentes. Su modelo articula de manera coordinada las áreas legal, contable, notarial y financiera, priorizando el rigor técnico, la visión estratégica y una ejecución precisa para ofrecer soluciones consistentes y alineadas con los objetivos de cada cliente.</p>
-         <p> La firma se apoya en un enfoque interdisciplinario basado en análisis profundo, planificación rigurosa y evaluación de impacto, lo que permite anticipar riesgos y optimizar estructuras. Este ejercicio profesional se complementa con altos estándares éticos, confidencialidad, formación continua y uso estratégico de la tecnología, posicionando a la firma como un socio confiable y de largo plazo en procesos de decisión crítica.</p>
-        </div>
-        <div class="about-image">
-          <img src="./assets/Conocenos.png" alt="Miguel Angel Giampaoli - Abogado" />
-        </div>
-      </div>
-    </section>
-
-    <section id="servicios" class="section">
-      <div class="container">
-        <h2>Nuestras Áreas</h2>
-        <div class="services-grid">
-          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
-  <h3>Legal</h3>
-  <p>Asistencia jurídica orientada a las siguientes ramas del Derecho: Administrativo, Contractual, Empresarial, Tributario, Penal Económico y Laboral.</p>
-</a>
-          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
-  <h3>Contable</h3>
-  <p>Soporte contable especializado para sostener estructuras organizadas y procesos confiables en la operatoria diaria.</p>
-</a>
-          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
-  <h3>Notarial</h3>
-  <p>Intervención notarial segura y oportuna para actos, contratos y documentación que requieren validez formal.</p>
-</a>
-          <a href="https://wa.me/5493416920444" target="_blank" class="service-card">
-  <h3>Financiera</h3>
-  <p>Análisis y acompañamiento financiero aplicados a la evaluación de escenarios, planificación y sostenibilidad de negocios.</p>
-</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="section">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p>¡Contactanos a través de los siguientes medios!</p>
-        <div class="social-links">
-          <a href="mailto:contacto@giampaoli.ar" class="button">
-            <i class="fas fa-envelope"></i> Email
-          </a>
-          <a href="https://wa.me/5493416920444" target="_blank" class="button">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-        </div>
-      </div>
-      <div class="container">
-  <h2>Nuestras Redes</h2>
-  <div class="social-links">
-
-    <a href="https://www.instagram.com/giampaolibusiness?igsh=NmF1bmZzMWhzdGNs" target="_blank" class="button">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-
-    <a href="https://www.linkedin.com/company/giampaoli-business-law/" target="_blank" class="button">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-
-    <a href="https://www.facebook.com/share/17aCLxjaDA/" class="button" target="_blank">
-      <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-
-  </div>
-</div>
-
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-  <script>
-    function toggleInfo(button, id) {
-      const content = document.getElementById(id);
-      const allContents = document.querySelectorAll('.info-content');
-      const allButtons = document.querySelectorAll('.toggle-btn');
-
-      allContents.forEach(section => {
-        if (section.id !== id) {
-          section.classList.remove('visible');
-          section.classList.add('hidden');
-        }
-      });
-
-      allButtons.forEach(btn => {
-        if (btn !== button) {
-          btn.textContent = '+';
-        }
-      });
-
-      const isVisible = content.classList.contains('visible');
-
-      if (isVisible) {
-        content.classList.remove('visible');
-        content.classList.add('hidden');
-        button.textContent = '+';
-      } else {
-        content.classList.remove('hidden');
-        content.classList.add('visible');
-        button.textContent = '–';
-      }
-    }
-  </script>
-</body>
+      <footer class="site-footer">
+        <p>
+          &copy; 2026 Giampaoli: business &amp; law. Todos los derechos reservados.
+          Prohibida su reproducci&oacute;n total o parcial.
+        </p>
+      </footer>
+    </main>
+  </body>
 </html>
