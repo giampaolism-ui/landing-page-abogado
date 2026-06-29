@@ -276,12 +276,15 @@ a {
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
+  transform-origin: center;
+  animation: hero-button-pulse 1.8s cubic-bezier(0.2, 0.75, 0.25, 1) 420ms infinite;
   transition: background 180ms ease, transform 180ms ease;
 }
 
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:focus-visible {
   background: #861f2e;
-  transform: translateY(-1px);
+  transform: scale(1.08);
 }
 
 .info {
@@ -353,7 +356,7 @@ a {
   font-size: 14.3px;
   font-weight: 500;
   line-height: 1.18;
-  text-align: justify;
+  text-align: left;
 }
 
 .card strong {
@@ -397,7 +400,7 @@ a {
   font-size: 18.2px;
   font-weight: 500;
   line-height: 1.32;
-  text-align: justify;
+  text-align: left;
 }
 
 .nosotros-columns strong {
@@ -525,7 +528,7 @@ a {
   font-size: 14.3px;
   font-weight: 500;
   line-height: 1.2;
-  text-align: justify;
+  text-align: left;
 }
 
 .contact-section {
@@ -594,6 +597,19 @@ a {
   background: #861f2e;
 }
 
+.contact-button-icon svg,
+.contact-button-icon img {
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
+.contact-button:hover .contact-button-icon svg,
+.contact-button:hover .contact-button-icon img,
+.contact-button:focus-visible .contact-button-icon svg,
+.contact-button:focus-visible .contact-button-icon img {
+  transform: scale(1.18);
+}
+
 .contact-button-icon svg {
   width: 25px;
   height: 25px;
@@ -602,6 +618,14 @@ a {
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.contact-button-icon img {
+  width: 25px;
+  height: 25px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .contact-button > span:last-child {
@@ -660,24 +684,73 @@ a {
 }
 
 .contact-socials a {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   color: #861f2e;
   text-decoration: none;
+  transform-origin: center;
 }
 
 .contact-socials img {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   display: block;
   object-fit: contain;
+  transform-origin: center;
+  transition: transform 180ms ease;
   filter: brightness(0) saturate(100%) invert(13%) sepia(52%) saturate(2247%) hue-rotate(334deg) brightness(92%) contrast(91%);
+}
+
+.contact-socials a:hover img,
+.contact-socials a:focus-visible img {
+  transform: scale(1.22);
+}
+
+.contact-section.is-visible .contact-socials a {
+  animation: social-pop 780ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.contact-section.is-visible .contact-socials a:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.contact-section.is-visible .contact-socials a:nth-child(3) {
+  animation-delay: 240ms;
 }
 
 .contact-socials a:focus-visible {
   outline-color: #861f2e;
+}
+
+@keyframes social-pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.22);
+  }
+}
+
+@keyframes hero-button-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-button,
+  .contact-section.is-visible .contact-socials a {
+    animation: none;
+  }
 }
 
 .site-footer {
@@ -763,6 +836,17 @@ a {
   .card p {
     font-size: 14.3px;
     line-height: 1.15;
+  }
+}
+
+@media (min-width: 981px) {
+  .card p,
+  .area-card p {
+    font-size: 15.7px;
+  }
+
+  .nosotros-columns p {
+    font-size: 20px;
   }
 }
 
@@ -900,6 +984,7 @@ a {
 
   .info {
     padding-top: 42px;
+    padding-bottom: 48px;
   }
 
   .cards {
