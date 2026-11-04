@@ -10,6 +10,7 @@ const isPreview = process.env.IS_PREVIEW ? true : false;
 // https://vite.dev/config/
 export default defineConfig({
   define: {
+    __RECAPTCHA_SITE_KEY__: JSON.stringify(process.env.SITE_RECAPTCHA_KEY || ""),
     __BASE_PATH__: JSON.stringify(base),
     __IS_PREVIEW__: JSON.stringify(isPreview),
     __READDY_PROJECT_ID__: JSON.stringify(process.env.PROJECT_ID || ""),

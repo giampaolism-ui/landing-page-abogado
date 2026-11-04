@@ -26,7 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
   </head>
   <body>
-    <form name="contacto" netlify hidden>
+    <form name="contacto" netlify netlify-honeypot="website_alt" data-netlify-recaptcha="true" hidden>
+  <input type="hidden" name="g-recaptcha-response" />
+  <input type="text" name="website_alt" tabindex="-1" autocomplete="off" aria-hidden="true" />
   <input type="text" name="nombre" />
   <input type="text" name="empresa" />
   <input type="email" name="email" />

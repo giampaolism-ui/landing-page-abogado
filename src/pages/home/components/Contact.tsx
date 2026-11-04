@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLocation } from 'react-router-dom';
 import Reveal from '@/components/base/Reveal';
+import Recaptcha, { type RecaptchaHandle } from '@/components/base/Recaptcha';
 
 const areaOptions = [
   'Contable',
@@ -53,6 +54,7 @@ const socials = [
 ];
 
 export default function Contact() {
+  const recaptchaRef = useRef<RecaptchaHandle>(null);
   const location = useLocation();
   const areaRef = useRef<HTMLSelectElement>(null);
   const companyTypeRef = useRef<HTMLSelectElement>(null);
@@ -125,6 +127,7 @@ export default function Contact() {
     e.preventDefault();
 
     const form = e.currentTarget;
+    if (status === 'loading') return;
     const formData = new FormData(form);
 
     const honeypot = String(formData.get('website_alt') || '').trim();
@@ -135,7 +138,13 @@ export default function Contact() {
       return;
     }
 
-    formData.delete('website_alt');
+    const token = recaptchaRef.current?.getResponse();
+    if (!token) {
+      setStatus('error');
+      setFormError('Completá la verificación «No soy un robot» antes de enviar.');
+      return;
+    }
+    formData.set('g-recaptcha-response', token);
 
     setStatus('loading');
     setFormError('');
@@ -170,6 +179,8 @@ export default function Contact() {
       setFormError(
         'Hubo un problema de conexión. Intentalo nuevamente.'
       );
+    } finally {
+      recaptchaRef.current?.reset();
     }
   };
 
@@ -242,12 +253,15 @@ export default function Contact() {
                 name="contacto"
                 method="POST"
                 data-netlify="true"
+                data-netlify-recaptcha="true"
+                netlify-honeypot="website_alt"
                 onSubmit={handleSubmit}
                 onInvalid={(e) => {
                   e.preventDefault();
                   e.currentTarget.querySelector<HTMLElement>(':invalid')?.focus();
                 }}
                 onReset={() => {
+                  recaptchaRef.current?.reset();
                   setMotivo('');
                   setFieldErrors({ email: '', telefono: '' });
                   setRequiredErrors({ nombre: false, mensaje: false });
@@ -469,9 +483,10 @@ export default function Contact() {
                   tabIndex={-1}
                   autoComplete="off"
                   aria-hidden="true"
-                  readOnly
                   className="hp-field"
                 />
+
+                <Recaptcha ref={recaptchaRef} />
 
                 <button
                   type="submit"
