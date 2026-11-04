@@ -26,9 +26,9 @@ const legalItems = [
     href: '#',
   },
   {
-    label: 'Aviso legal',
+    label: 'Información legal',
     description:
-      'El contenido de este sitio tiene carácter informativo y no constituye asesoramiento profesional vinculante. Para el análisis de un caso concreto, contactar al equipo de GBL a través de los canales indicados.',
+      'La fórmula habitual es que el contenido es informativo, no constituye asesoramiento profesional y no genera relación profesional hasta la contratación. Para el análisis de un caso concreto, contactar al equipo de GBL a través de los canales indicados.',
     href: '#',
   },
 ];
@@ -55,28 +55,28 @@ export default function Footer() {
                 className="h-6 w-auto object-contain transition-transform duration-500 md:h-8 group-hover:scale-[1.02]"
               />
             </a>
-            <p className="mt-4 text-sm text-warm/75 max-w-xs leading-relaxed">
-              Rosario, Santa Fe, Argentina — con alcance a todo el país y la región.
+            <p className="mt-4 text-sm text-warm/90 max-w-xs leading-relaxed">
+              Rosario, Santa Fe, Argentina — con alcance a todo el país y la región sur del continente.
             </p>
           </div>
 
           <div className="lg:col-span-4">
-            <h4 className="text-[12.5px] font-semibold tracking-[0.2em] uppercase text-warm/45 mb-3">
+            <h4 className="text-[12.5px] font-semibold tracking-[0.2em] uppercase text-warm/60 mb-3">
               Horario de atención
             </h4>
-            <p className="text-sm text-warm/75 leading-relaxed">
-              Lunes a viernes, de 8 a 18 hs (hora de Argentina, GMT-3). Para consultas realizadas
+            <p className="text-sm text-warm/90 leading-relaxed">
+              Lunes a viernes, de 8 a 18 h (hora de Argentina, UTC−3”). Para consultas realizadas
               desde otros husos horarios, la respuesta se procesa dentro de nuestro horario habitual,
               salvo que se trate de una urgencia.
             </p>
 
             <div className="mt-4 inline-flex items-center gap-3 border border-warm/25 rounded-full pl-3 pr-4 py-2">
               <span className="w-2 h-2 rounded-full bg-brand-light animate-pulse"></span>
-              <span className="text-[11px] tracking-[0.18em] uppercase text-warm/55">
+              <span className="text-[11px] tracking-[0.18em] uppercase text-warm/70">
                 Hora local en Argentina
               </span>
               <span className="text-sm font-semibold text-warm">
-                <LocalClock /> <span className="text-warm/55 font-medium">ART · GMT-3</span>
+                <LocalClock /> <span className="text-warm/70 font-medium">ART · UTC-3</span>
               </span>
             </div>
 
@@ -86,11 +86,11 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-4">
-            <h4 className="text-[12.5px] font-semibold tracking-[0.2em] uppercase text-warm/45 mb-3">
+            <h4 className="text-[12.5px] font-semibold tracking-[0.2em] uppercase text-warm/60 mb-3">
               Alcance internacional
             </h4>
-            <p className="text-sm text-warm/75 leading-relaxed">
-              Acompañamos a empresas e inversores de toda la región.
+            <p className="text-sm text-warm/90 leading-relaxed">
+              Acompañamos a empresas de toda la región sur del continente.
             </p>
             <ul className="mt-4 flex flex-wrap items-center gap-3">
               {mercosur.map((item) => (
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-warm/20">
-          <h4 className="text-[12.5px] font-semibold tracking-[0.2em] uppercase text-warm/45 mb-4">
+          <h4 className="text-[12.5px] font-semibold tracking-[0.2em] uppercase text-warm/60 mb-4">
             Legal
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-5">
@@ -119,12 +119,12 @@ export default function Footer() {
               <div key={item.label}>
                 <a
                   href={item.href}
-                  className="text-sm text-warm/85 hover:text-white link-underline transition-colors font-medium"
+                  className="text-sm text-warm/100 hover:text-white link-underline transition-colors font-medium"
                 >
                   {item.label}
                 </a>
                 {item.description && (
-                  <p className="mt-2 text-xs text-warm/55 leading-relaxed">{item.description}</p>
+                  <p className="mt-2 text-xs text-warm/70 leading-relaxed">{item.description}</p>
                 )}
               </div>
             ))}
@@ -132,8 +132,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-7 pt-5 border-t border-warm/20">
-          <p className="text-xs text-warm/55">
-            © Giampaoli: business &amp; law. Todos los derechos reservados.
+          <p className="text-xs text-warm/70">
+            © 2026 Giampaoli: business &amp; law. Todos los derechos reservados.
           </p>
         </div>
       </div>

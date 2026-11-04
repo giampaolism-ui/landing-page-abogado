@@ -4,9 +4,9 @@ const modos = [
   {
     number: '01',
     icon: 'ri-team-line',
-    title: 'Partners estratégicos',
+    title: 'Aliados estratégicos',
     description:
-      'GBL se integra a la operación de la empresa como socio, una parte integrante del negocio, no un proveedor externo al que se consulta una vez tomada la decisión. Participamos activamente en las decisiones estratégicas a medida que surgen, como parte del proceso que las define.',
+      'GBL se integra a la operación de la empresa como aliado, una parte integrante del negocio, no un proveedor externo al que se consulta una vez tomada la decisión. Participamos activamente en las decisiones estratégicas a medida que surgen, como parte del proceso que las define.',
   },
   {
     number: '02',
@@ -31,7 +31,7 @@ export default function Vinculacion() {
         <Reveal>
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-brand"></span>
-            <span className="text-[12.5px] tracking-[0.35em] uppercase text-brand-900/55">
+            <span className="text-[12.5px] tracking-[0.35em] uppercase text-brand-900/70">
               Modos de vinculación
             </span>
           </div>
@@ -42,38 +42,40 @@ export default function Vinculacion() {
             <h2 className="font-serif font-medium text-4xl md:text-6xl leading-[1.04] text-brand-900">
               No hay una única
               <br />
-              forma de trabajar
-              <span className="italic text-brand"> con GBL.</span>
+              <span className="italic text-brand">forma de trabajo</span>{' '}
+              con GBL.
             </h2>
           </Reveal>
           <Reveal delay={150} className="lg:col-span-5 flex lg:items-end">
-            <p className="text-base md:text-lg text-brand-900/70 font-light leading-relaxed lg:pb-2">
+            <p className="text-base md:text-lg text-brand-900/85 font-light leading-relaxed lg:pb-2">
               El vínculo se adapta a la necesidad concreta de cada cliente y puede sostenerse en el
               tiempo o resolverse en una única intervención.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-900/10 border border-brand-900/10">
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 border border-brand/25 divide-y divide-brand/25 md:divide-y-0 md:divide-x">
           {modos.map((modo, i) => (
-            <Reveal key={modo.number} delay={i * 110}>
+            <div key={modo.number} className="min-w-0">
+            <Reveal delay={i * 110} className="h-full">
               <article className="group h-full bg-white p-7 md:p-9 transition-colors duration-500 hover:bg-[#E9D4D7] flex flex-col">
                 <div className="flex items-center justify-between">
                   <span className="flex h-12 w-12 items-center justify-center border border-brand-900/15 text-brand transition-colors duration-500 group-hover:border-brand group-hover:bg-brand group-hover:text-white">
                     <i className={`${modo.icon} text-xl`}></i>
                   </span>
-                  <span className="font-serif text-3xl font-medium text-brand-900/20">
+                  <span className="font-serif text-3xl font-medium text-brand-900/35">
                     {modo.number}
                   </span>
                 </div>
                 <h3 className="mt-7 font-serif text-2xl font-medium text-brand-900">
                   {modo.title}
                 </h3>
-                <p className="mt-4 text-sm text-brand-900/65 font-light leading-relaxed">
+                <p className="mt-4 text-sm text-brand-900/80 font-light leading-relaxed">
                   {modo.description}
                 </p>
               </article>
             </Reveal>
+            </div>
           ))}
         </div>
       </div>
