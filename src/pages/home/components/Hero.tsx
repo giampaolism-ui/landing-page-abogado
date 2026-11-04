@@ -20,14 +20,14 @@ export default function Hero() {
   const fade = loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8';
   const base = 'transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)]';
   const line =
-    'block text-[clamp(1.75rem,8vw,2.7rem)] sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6.4rem]';
+    'block text-[clamp(1.75rem,8vw,2.7rem)] sm:text-5xl md:text-6xl lg:text-[clamp(3.5rem,9dvh,5.5rem)] xl:text-[clamp(3.5rem,9dvh,6.4rem)]';
 
   return (
-    <section id="inicio" className="relative min-h-screen w-full overflow-hidden bg-brand-900">
+    <section id="inicio" className="relative min-h-[100dvh] w-full overflow-hidden bg-brand-900">
       <HeroBackground />
 
-      <div className="relative z-10 flex min-h-screen w-full items-center">
-        <div className="w-full px-6 pt-32 pb-32 md:px-10 md:pt-36 md:pb-36 lg:px-16">
+      <div className="relative z-10 flex min-h-[100dvh] w-full items-center">
+        <div className="w-full px-6 pt-[clamp(7rem,14dvh,9rem)] pb-[clamp(4rem,8dvh,7rem)] md:px-10 lg:px-16">
           <div className="max-w-[62rem]">
             {/* Eyebrow */}
             <div className={`flex items-center gap-4 ${base} ${fade}`}>
@@ -38,14 +38,14 @@ export default function Hero() {
             </div>
 
             <span
-              className={`mt-6 block w-fit max-w-full rounded-none bg-brand px-2 py-1 text-[11.5px] font-medium uppercase tracking-[0.36em] text-white md:text-[12.5px] ${base} ${fade}`}
+              className={`mt-[clamp(0.75rem,2dvh,1.5rem)] block w-fit max-w-full rounded-none bg-brand px-2 py-1 text-[11.5px] font-medium uppercase tracking-[0.36em] text-white md:text-[12.5px] ${base} ${fade}`}
               style={{ transitionDelay: '80ms' }}
             >
               Multidisciplinary advisory firm
             </span>
 
             {/* Claim — protagonist of the screen */}
-            <h1 className="mt-6 font-hero font-medium uppercase leading-[1.0] tracking-[-0.01em] text-warm md:mt-8">
+            <h1 className="mt-[clamp(1rem,2.5dvh,2rem)] font-hero font-medium uppercase leading-[1.0] tracking-[-0.01em] text-warm">
               <span className={`${line} ${base} ${fade}`} style={{ transitionDelay: '160ms' }}>
                 Expertise que impulsa
               </span>
@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Supporting text — Inicio info */}
             <div
-              className={`mt-9 max-w-[46rem] md:mt-11 ${base} ${fade}`}
+              className={`mt-[clamp(1rem,2.5dvh,2.75rem)] max-w-[54rem] ${base} ${fade}`}
               style={{ transitionDelay: '440ms' }}
             >
               <p className="text-sm font-light leading-relaxed text-warm/90 md:text-base">
@@ -66,17 +66,17 @@ export default function Hero() {
                 misma estructura, para que cada empresa gestione su negocio, de principio a fin, con
                 un solo interlocutor en lugar de coordinar proveedores dispersos.
               </p>
-              <p className="mt-6 text-lg font-medium italic leading-relaxed text-white md:text-2xl">
+              <p className="mt-[clamp(0.75rem,2dvh,1.5rem)] text-lg font-medium italic leading-relaxed text-white md:text-2xl">
                 «La fragmentación tiene un costo. La integración un resultado.»
               </p>
-              <p className="mt-5 text-[12.5px] font-medium uppercase tracking-[0.24em] text-warm/70">
+              <p className="mt-[clamp(0.75rem,1.5dvh,1.25rem)] text-[12.5px] font-medium uppercase tracking-[0.24em] text-warm/70">
                 Rosario · Alcance a todo el país y la región sur del continente
               </p>
             </div>
 
             {/* Single action */}
             <div
-              className={`mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center md:mt-12 ${base} ${fade}`}
+              className={`mt-[clamp(1rem,3dvh,3rem)] flex flex-col items-start gap-4 sm:flex-row sm:items-center ${base} ${fade}`}
               style={{ transitionDelay: '600ms' }}
             >
               <a
@@ -92,7 +92,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom bar: scroll indicator + discipline numbering */}
-      <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-8 md:px-10 md:pb-10 lg:px-16">
+      <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-4 md:px-10 md:pb-6 lg:px-16">
         <div className="flex items-end justify-end gap-6">
           <ul className="hidden items-center gap-6 md:flex">
             {disciplines.map((d) => (
