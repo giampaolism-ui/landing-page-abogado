@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Reveal from '@/components/base/Reveal';
 import ZoomImage from '@/components/base/ZoomImage';
 
@@ -45,24 +46,24 @@ export default function StrategicCTA() {
             <br />
             una decisión importante
             <br />
-            para tu <span className="italic text-white/80">negocio?</span>
+            para tu <span className="italic text-white/95">negocio?</span>
           </h2>
         </Reveal>
 
         <Reveal delay={150}>
-          <p className="mt-8 text-base md:text-lg text-white/85 font-light">
+          <p className="mt-8 text-base md:text-lg text-white/100 font-light">
             Analicemos sus implicancias desde una mirada integral.
           </p>
         </Reveal>
 
         <Reveal delay={250} className="mt-10">
-          <a
-            href="#contacto"
-            className="btn-heartbeat whitespace-nowrap group inline-flex items-center gap-3 bg-warm text-brand text-[14px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-brand-900 hover:text-warm transition-all duration-300"
+          <Link
+            to="?#contacto"
+            className="btn-heartbeat max-w-full whitespace-normal sm:whitespace-nowrap group inline-flex items-center gap-3 bg-warm text-brand text-[14px] font-semibold tracking-[0.2em] uppercase px-5 sm:px-8 py-4 hover:bg-brand-900 hover:text-warm transition-all duration-300"
           >
             Conversar con nuestro equipo
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

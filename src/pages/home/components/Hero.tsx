@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import HeroBackground from './HeroBackground';
 
@@ -19,7 +20,7 @@ export default function Hero() {
   const fade = loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8';
   const base = 'transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)]';
   const line =
-    'block text-[2.7rem] sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6.4rem]';
+    'block text-[clamp(1.75rem,8vw,2.7rem)] sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6.4rem]';
 
   return (
     <section id="inicio" className="relative min-h-screen w-full overflow-hidden bg-brand-900">
@@ -31,13 +32,13 @@ export default function Hero() {
             {/* Eyebrow */}
             <div className={`flex items-center gap-4 ${base} ${fade}`}>
               <span className="h-px w-10 bg-brand-light"></span>
-              <span className="text-[11.5px] font-medium uppercase tracking-[0.42em] text-warm/80 md:text-[12.5px]">
+              <span className="text-[11.5px] font-medium uppercase tracking-[0.42em] text-warm/95 md:text-[12.5px]">
                 Giampaoli · Business &amp; Law
               </span>
             </div>
 
             <span
-              className={`mt-6 block text-[11.5px] font-medium uppercase tracking-[0.36em] text-brand-light md:text-[12.5px] ${base} ${fade}`}
+              className={`mt-6 block w-fit max-w-full rounded-none bg-brand px-2 py-1 text-[11.5px] font-medium uppercase tracking-[0.36em] text-white md:text-[12.5px] ${base} ${fade}`}
               style={{ transitionDelay: '80ms' }}
             >
               Multidisciplinary advisory firm
@@ -59,17 +60,17 @@ export default function Hero() {
               className={`mt-9 max-w-[46rem] md:mt-11 ${base} ${fade}`}
               style={{ transitionDelay: '440ms' }}
             >
-              <p className="text-sm font-light leading-relaxed text-warm/75 md:text-base">
+              <p className="text-sm font-light leading-relaxed text-warm/90 md:text-base">
                 Una firma que integra diversas áreas de servicios profesionales —{' '}
                 <span className="text-warm">Legal, Contable, Notarial y Financiera</span> — bajo una
-                misma estructura, para que cada empresa resuelva su negocio, de principio a fin, con
+                misma estructura, para que cada empresa gestione su negocio, de principio a fin, con
                 un solo interlocutor en lugar de coordinar proveedores dispersos.
               </p>
-              <p className="mt-4 text-sm font-light italic leading-relaxed text-warm/60 md:text-[17.5px]">
-                «La fragmentación tiene un costo. La integración, un resultado.»
+              <p className="mt-6 text-lg font-medium italic leading-relaxed text-white md:text-2xl">
+                «La fragmentación tiene un costo. La integración un resultado.»
               </p>
-              <p className="mt-5 text-[12.5px] font-medium uppercase tracking-[0.24em] text-warm/55">
-                Rosario · Alcance a todo el país y la región
+              <p className="mt-5 text-[12.5px] font-medium uppercase tracking-[0.24em] text-warm/70">
+                Rosario · Alcance a todo el país y la región sur del continente
               </p>
             </div>
 
@@ -80,7 +81,7 @@ export default function Hero() {
             >
               <a
                 href="#a-quienes"
-                className="btn-heartbeat group inline-flex items-center gap-3 whitespace-nowrap bg-brand px-8 py-4 text-[12.5px] font-semibold uppercase tracking-[0.24em] text-white transition-colors duration-300 hover:bg-brand-dark"
+                className="btn-heartbeat group inline-flex items-center gap-3 max-w-full whitespace-normal sm:whitespace-nowrap bg-brand px-5 sm:px-8 py-4 text-[12.5px] font-semibold uppercase tracking-[0.24em] text-white transition-colors duration-300 hover:bg-brand-dark"
               >
                 Conocé cómo trabajamos
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -97,7 +98,7 @@ export default function Hero() {
             {disciplines.map((d) => (
               <li
                 key={d.number}
-                className="flex items-center gap-2 text-[11.5px] uppercase tracking-[0.28em] text-warm/45"
+                className="flex items-center gap-2 text-[11.5px] uppercase tracking-[0.28em] text-warm/60"
               >
                 <span className="text-brand-light">{d.number}</span>
                 <span>{d.label}</span>

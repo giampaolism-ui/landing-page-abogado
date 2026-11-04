@@ -1,23 +1,6 @@
 import Reveal from '@/components/base/Reveal';
 import ZoomImage from '@/components/base/ZoomImage';
 
-const pillars = [
-  {
-    label: 'Lógica de eficiencia',
-    text: 'Contratar un equipo que ya trabaja de forma coordinada reduce los costos y los tiempos muertos que implica contratar y coordinar varios prestadores por separado.',
-  },
-  {
-    label: 'Diferencial de mercado',
-    text: 'Cuando GBL se fundó, esta clase de servicios era un privilegio reservado a las estructuras corporativas más grandes. Nuestras formas de trabajo y de contratación ampliaron ese panorama a todo el espectro empresarial.',
-  },
-  {
-    label: 'Alcance',
-    text: 'Con sede principal en Rosario, acompañamos a empresas de capital nacional y extranjero a lo largo de todo su ciclo de negocio, con alcance a todo el país y la región sur del continente.',
-  },
-];
-
-const disciplines = ['Legal', 'Contable', 'Notarial', 'Financiera'];
-
 export default function Firma() {
   return (
     <section id="firma" className="bg-white w-full">
@@ -25,8 +8,8 @@ export default function Firma() {
         <Reveal>
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-brand"></span>
-            <span className="text-[12.5px] tracking-[0.35em] uppercase text-brand-900/55">
-              Quiénes somos · La firma
+            <span className="text-[12.5px] tracking-[0.35em] uppercase text-brand-900/70">
+              Nosotros
             </span>
           </div>
         </Reveal>
@@ -49,7 +32,7 @@ export default function Firma() {
               />
               <div className="absolute inset-0 bg-brand/40"></div>
               <div className="absolute bottom-5 left-5">
-                <span className="text-[11.5px] tracking-[0.3em] uppercase text-white/80">
+                <span className="text-[11.5px] tracking-[0.3em] uppercase text-white/95">
                   Multidisciplinary advisory firm
                 </span>
               </div>
@@ -58,22 +41,21 @@ export default function Firma() {
 
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="text-base md:text-lg text-brand-900/70 font-light leading-relaxed">
-                Giampaoli: Business &amp; Law nació de un diagnóstico concreto: las empresas no fallan
-                por falta de asesoramiento, sino por falta de coordinación entre quienes las asesoran.
+              <p className="text-base md:text-lg text-brand-900/85 font-light leading-relaxed">
+                Giampaoli: business &amp; law (GBL) nació de un diagnóstico concreto: la complejidad de las decisiones empresariales exige una mirada integral que contemple las distintas dimensiones de cada negocio.
                 Un abogado que desconoce el impacto contable de una cláusula, un contador que no
                 participa de la decisión societaria, un asesor financiero que no accede al contrato que
                 rige la operación: cada disciplina resuelve su parte, pero nadie mira el negocio
-                completo.
+                completo. 
               </p>
             </Reveal>
 
+
             <Reveal delay={120} className="mt-6">
-              <p className="text-base md:text-lg text-brand-900/70 font-light leading-relaxed">
-                Sobre esa idea, <strong className="font-semibold text-brand-900">Miguel Angel Giampaoli</strong>{' '}
+              <p className="text-base md:text-lg text-brand-900/85 font-light leading-relaxed">
+                Sobre esa idea, <a href="https://www.linkedin.com/in/miguelangelgiampaoli/" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-900 underline decoration-brand/30 decoration-1 underline-offset-4 transition-colors duration-300 hover:text-brand hover:decoration-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">Miguel Angel Giampaoli</a>{' '}
                 fundó GBL como una Multidisciplinary Advisory Firm que integra las áreas Legal, Contable,
-                Notarial y Financiera bajo una misma lógica de trabajo: un equipo multidisciplinario, con
-                comunicación permanente entre ellas y miras a las necesidades puntuales de cada cliente.
+                Notarial y Financiera bajo una misma lógica de trabajo, basada en la coordinación y comunicación permanente entre ellas y en una atención adaptada a las necesidades particulares de cada cliente.
               </p>
             </Reveal>
 
@@ -87,7 +69,7 @@ export default function Firma() {
             </Reveal>
 
             <Reveal delay={280} className="mt-8">
-              <p className="text-base md:text-lg text-brand-900/70 font-light leading-relaxed">
+              <p className="text-base md:text-lg text-brand-900/85 font-light leading-relaxed">
                 Esa integración responde, además, a una lógica de eficiencia: contratar un equipo que ya
                 trabaja de forma coordinada reduce los costos y los tiempos muertos que implica contratar
                 varios prestadores por separado, y coordinarlos por cuenta propia. Pero el diferencial de
@@ -104,39 +86,6 @@ export default function Firma() {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-900/10 border border-brand-900/10">
-          {pillars.map((p, i) => (
-            <Reveal key={p.label} delay={i * 110}>
-              <div className="h-full bg-white p-7 md:p-8">
-                <span className="text-[11.5px] tracking-[0.28em] uppercase text-brand font-semibold">
-                  {p.label}
-                </span>
-                <p className="mt-4 text-sm text-brand-900/70 font-light leading-relaxed">{p.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal className="mt-14 md:mt-16">
-          <div className="border border-brand bg-brand px-6 py-8 md:px-10 md:py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
-              {disciplines.map((d, i) => (
-                <span key={d} className="flex items-center gap-4">
-                  <span className="text-[12.5px] md:text-xs tracking-[0.22em] uppercase font-medium text-white">
-                    {d}
-                  </span>
-                  {i < disciplines.length - 1 && <span className="text-white/60">×</span>}
-                </span>
-              ))}
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="text-white text-lg">→</span>
-              <span className="text-[12.5px] md:text-xs tracking-[0.3em] uppercase font-semibold text-white">
-                Estrategia
-              </span>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

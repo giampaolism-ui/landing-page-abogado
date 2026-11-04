@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Nosotros', href: '#firma' },
-  { label: 'Institucional', href: '#a-quienes' },
-  { label: 'Áreas de Práctica', href: '#areas' },
+  { label: 'Segmentos', href: '#a-quienes' },
+  { label: 'Áreas de expertise', href: '#areas' },
   { label: 'Vinculación', href: '#vinculacion' },
   { label: 'Modalidades', href: '#modalidades' },
 ];
@@ -65,30 +65,30 @@ export default function Navbar() {
             />
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-8 xl:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="link-underline text-[12.5px] font-medium uppercase tracking-[0.22em] text-white/85 transition-colors duration-300 hover:text-white"
+                className="link-underline text-[12.5px] font-medium uppercase tracking-[0.22em] text-white/100 transition-colors duration-300 hover:text-white"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contacto"
+            <Link
+              to={{ pathname, search: '', hash: '#contacto' }}
               className="btn-heartbeat inline-flex items-center gap-2 whitespace-nowrap bg-white px-5 py-3 text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand transition-all duration-300 hover:bg-white/90"
             >
               Conversemos
               <i className="ri-chat-3-line text-base"></i>
-            </a>
+            </Link>
           </nav>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label="Abrir menú"
-            className="flex h-11 w-11 items-center justify-center text-white transition-colors duration-300 md:hidden"
+            className="flex h-11 w-11 items-center justify-center text-white transition-colors duration-300 xl:hidden"
           >
             <i className={`text-2xl ${open ? 'ri-close-line' : 'ri-menu-3-line'}`}></i>
           </button>
@@ -96,7 +96,7 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`overflow-hidden transition-all duration-500 md:hidden ${
+        className={`overflow-hidden transition-all duration-500 xl:hidden ${
           open ? 'max-h-96 border-t border-white/10 bg-black/40 backdrop-blur-xl' : 'max-h-0'
         }`}
       >
@@ -106,19 +106,19 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="border-b border-white/10 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white/85 transition-colors hover:text-white"
+              className="border-b border-white/10 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white/100 transition-colors hover:text-white"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contacto"
+          <Link
+            to={{ pathname, search: '', hash: '#contacto' }}
             onClick={() => setOpen(false)}
             className="btn-heartbeat mt-3 inline-flex items-center justify-center gap-2 bg-white py-4 text-center text-sm font-semibold uppercase tracking-[0.15em] text-brand transition-colors hover:bg-white/90"
           >
             Conversemos
             <i className="ri-chat-3-line text-base"></i>
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

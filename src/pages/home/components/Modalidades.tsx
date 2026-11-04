@@ -33,7 +33,7 @@ const modalidades = [
     icon: 'ri-alarm-warning-line',
     title: 'Urgencias',
     description:
-      'Atención inmediata ante situaciones que no admiten demora. Ej.: explosión, incendio o derrame con daño ambiental de gran magnitud, que dispara obligaciones de denuncia inmediata ante organismos ambientales y expone a la empresa y a sus directivos a responsabilidad penal. Es la única modalidad fuera del horario habitual: 24 horas, los 7 días de la semana.',
+      'Atención ante situaciones que no admiten demora: inspecciones, clausuras, medidas cautelares, requerimientos de ARCA o Aduana, y siniestros con impacto ambiental o riesgo de responsabilidad penal. Es la única modalidad fuera del horario habitual: 24 horas, los 7 días de la semana. Para activar la atención de urgencias, contactanos por WhatsApp.',
     example: '',
     featured: true,
   },
@@ -46,7 +46,7 @@ export default function Modalidades() {
         <Reveal>
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-brand"></span>
-            <span className="text-[12.5px] tracking-[0.35em] uppercase text-brand-900/55">
+            <span className="text-[12.5px] tracking-[0.35em] uppercase text-brand-900/70">
               Modalidades de contratación
             </span>
           </div>
@@ -62,7 +62,7 @@ export default function Modalidades() {
             </h2>
           </Reveal>
           <Reveal delay={150} className="lg:col-span-5 flex lg:items-end">
-            <p className="text-base md:text-lg text-brand-900/70 font-light leading-relaxed lg:pb-2">
+            <p className="text-base md:text-lg text-brand-900/85 font-light leading-relaxed lg:pb-2">
               Pensadas para adaptarse a la naturaleza de cada necesidad: no todas las consultas
               requieren el mismo tipo de vínculo comercial.
             </p>
@@ -77,15 +77,15 @@ export default function Modalidades() {
                   <i className={`${mod.icon} text-xl`}></i>
                 </span>
 
-                <span className="mt-7 text-[11.5px] tracking-[0.28em] uppercase font-medium text-warm/60">
+                <span className="mt-7 text-[11.5px] tracking-[0.28em] uppercase font-medium text-warm/75">
                   Modalidad {mod.number}
                 </span>
                 <h3 className="mt-2 font-serif text-2xl font-medium text-warm">{mod.title}</h3>
-                <p className="mt-4 text-sm font-light leading-relaxed text-warm/80">
+                <p className="mt-4 text-sm font-light leading-relaxed text-warm/95">
                   {mod.description}
                 </p>
                 {mod.example && (
-                  <p className="mt-auto pt-5 text-xs font-light italic text-warm/70">
+                  <p className="mt-auto pt-5 text-xs font-light italic text-warm/85">
                     {mod.example}
                   </p>
                 )}
